@@ -1,8 +1,13 @@
 # Object Extender Gem
 
-Call class statements with extended object.
+[![Gem Version](https://badge.fury.io/rb/object_extender.svg)](https://badge.fury.io/rb/object_extender)
+develop: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=develop)](https://travis-ci.org/masuidrive/object_extender_rb)  master: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=master)](https://travis-ci.org/masuidrive/object_extender_rb)
 
-- http://github.com/masuidrive/object_extender_rb
+Call class statements with extended object.
+It's without class pollution.
+
+- https://github.com/masuidrive/object_extender_rb
+- https://rubygems.org/gems/object_extender
 - License: MIT
 - Author: Yuichiro MASUI <masui@masuidrive.jp>
 
