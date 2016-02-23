@@ -3,3 +3,11 @@ rvm:
   - 1.9.2
   - 2.2
 script: rake test
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: iPLvtMc8QsgXQ/M9fUcRDuuURC+GWLIAoJvYM5qIPNbMrQi5Q66Vd2j63msycg0cITS6D0YqcepJ8iszy0uQsHaZvz4JFwK+LhA7L9gqFl3T9J6H3BgHsnCcbpI163VsB6rAnIAxX+ifCeWvb9mBwgZ1rLr6x08RsnyqWCxsJXOe9AlmrB3rmRelTA4rJ5GBcNmVxPAl564RZyh+fUDaDwo6oHer4ZVwVvgQZssYMCzljTyWa03wjbl+jPfoWETkdmt66h4i6/hkP2AGXsDeWW8Q2cN2xM0u2nzFkY3KtMtkm8nJKt5RUsUV9djYqWoQLlKVq8Olb8Oc0od8NgVl2IodsSkNAslBO70a38IH9Ch0CQ7kuvdP+aX/TLxbhkZeY79jqe3saQxHZx8uPv6W4OgvlapBd3Q5eqcrRVPx+z7CGy5mLeLLphCj7reEZxNVMCfmVz4f0GpHn3XwlDU/C610avJIHoOHhlLB2qbHh5JXF/SnBP+x0B89UPVdq1aoIoGCkf4Xf16fZKpdbvYz4JqQI62q5iEVZ5TvWwaCs1FdAzgZR0uFQUlaIvhkXOWLITYeWiN2JU2vAv4ukclWfNLxj4R5ue5V3fI+j5Szcib3eUqVHk97bthVZd2fyR86l9wy7YMoclkhZogMDu0Sexd2Y/RkXSNtpBFYBUnfaJM=
+  gemspec: object_extender.gemspec
+  on:
+    branch: master
