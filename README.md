@@ -1,8 +1,5 @@
 # Object Extender Gem
 
-[![Gem Version](https://badge.fury.io/rb/object_extender.svg)](https://badge.fury.io/rb/object_extender)
-develop: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=develop)](https://travis-ci.org/masuidrive/object_extender_rb)  master: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=master)](https://travis-ci.org/masuidrive/object_extender_rb)
-
 Call class statements with extended object.
 It's without class pollution.
 
@@ -11,6 +8,9 @@ It's without class pollution.
 - License: MIT
 - Author: Yuichiro MASUI <masui@masuidrive.jp>
 
+develop: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=develop)](https://travis-ci.org/masuidrive/object_extender_rb)
+master: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg?branch=master)](https://travis-ci.org/masuidrive/object_extender_rb)
+[![Gem Version](https://badge.fury.io/rb/object_extender.svg)](https://badge.fury.io/rb/object_extender)
 
 ## Getting Started
 
