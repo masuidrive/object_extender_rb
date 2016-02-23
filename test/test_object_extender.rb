@@ -1,8 +1,6 @@
 require 'test/unit'
 require 'object_extender'
 
-# https://github.com/rails/rails/blob/d06e42518a4fdd1732f1d75a43c69071bcd79245/activesupport/test/concern_test.rb
-
 class ObjectExtenderTest < Test::Unit::TestCase
   def test_without_ext
     obj = Object.new

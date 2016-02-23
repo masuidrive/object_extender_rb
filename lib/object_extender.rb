@@ -18,6 +18,7 @@
 # References:
 # - https://github.com/rails/rails/blob/master/activesupport/lib/active_support/concern.rb
 #
+require "object_extender/version"
 
 module ObjectExtender
   class MultipleExtendedClassBlocks < StandardError #:nodoc:

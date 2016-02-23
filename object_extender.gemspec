@@ -1,13 +1,23 @@
-Gem::Specification.new do |s|
-  s.name        = 'object_extender'
-  s.version     = '1.0.0'
-  s.date        = '2016-02-23'
-  s.summary     = 'Call class statements with extended object without class pollution'
-  s.authors     = ['Yuichiro MASUI']
-  s.email       = 'masui@masuidrive.jp'
-  s.files       = ["lib/object_extender.rb"]
-  s.homepage    =
-    'http://rubygems.org/gems/object_extender'
-  s.license     = 'MIT'
-  s.required_ruby_version = '>= 1.9.2'
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'lib/object_extender/version'
+
+Gem::Specification.new do |spec|
+  spec.name          = "object_extender"
+  spec.version       = ObjectExtender::VERSION
+  spec.authors       = ['Yuichiro MASUI']
+  spec.email         = 'masui@masuidrive.jp'
+  spec.summary       = 'Call class statements with extended object without class pollution'
+  spec.description   = 'Call class statements with extended object without class pollution'
+  spec.homepage      = "https://github.com/masuidrive/object_extender_rb"
+  spec.license       = "MIT"
+
+  spec.required_ruby_version = '>= 1.9.2'
+
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ['lib']
+
+  spec.add_development_dependency 'rake'
 end
