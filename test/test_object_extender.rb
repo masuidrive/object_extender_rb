@@ -48,19 +48,68 @@ class ObjectExtenderTest < Test::Unit::TestCase
 
   module WithCallingExtended
     extend ObjectExtender
-    extended_class do
-      attr_accessor :foo
-    end
     extended do
       self.foo = :FooFoo
     end
   end
 
+  module WithCallingExtendedAndExtendedClass
+    extend ObjectExtender
+    extended_class do
+      attr_accessor :foo
+    end
+    extended do
+      self.foo = :FooFooFoo
+    end
+  end
+
   def test_with_extended
     obj = Object.new
+    assert_equal obj, obj.extend(WithCallingExtendedAndExtendedClass)
+    assert_equal :FooFooFoo, obj.foo
+
+    test_without_ext
+  end
+
+  def test_with_extended_and_extended_class
+    obj = Object.new
+    assert_equal obj, obj.extend(WithCallingClassMethod)
     assert_equal obj, obj.extend(WithCallingExtended)
     assert_equal :FooFoo, obj.foo
 
     test_without_ext
+  end
+
+  def test_with_multiple_extended
+    obj = Object.new
+    assert_equal obj, obj.extend(WithCallingExtendedAndExtendedClass)
+    assert_equal obj, obj.extend(WithCallingExtended)
+    assert_equal :FooFoo, obj.foo
+
+    test_without_ext
+  end
+
+  def test_multiple_extended
+    assert_raises(ObjectExtender::MultipleExtendedBlocks) do
+      Module.new do
+        extend ObjectExtender
+        extended do
+        end
+        extended do
+        end
+      end
+    end
+  end
+
+  def test_multiple_extended_class
+    assert_raises(ObjectExtender::MultipleExtendedClassBlocks) do
+      Module.new do
+        extend ObjectExtender
+        extended_class do
+        end
+        extended_class do
+        end
+      end
+    end
   end
 end
