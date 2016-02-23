@@ -7,8 +7,9 @@ Gem::Specification.new do |spec|
   spec.version       = ObjectExtender::VERSION
   spec.authors       = ['Yuichiro MASUI']
   spec.email         = 'masui@masuidrive.jp'
-  spec.summary       = 'Call class statements with extended object without class pollution'
-  spec.description   = 'Call class statements with extended object without class pollution'
+  spec.summary       = 'Call class statements with extended object. It\'s without class pollution.'
+  spec.description   = 'Call class statements with extended object. It\'s without class pollution.'
+
   spec.homepage      = "https://github.com/masuidrive/object_extender_rb"
   spec.license       = "MIT"
 
