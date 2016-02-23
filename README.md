@@ -14,7 +14,7 @@ master: [![Build Status](https://travis-ci.org/masuidrive/object_extender_rb.svg
 
 ## Getting Started
 
-```
+```rb
 require 'object_extender'
 
 module AddFooAssoc
